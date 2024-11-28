@@ -1,0 +1,189 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevent padding and margin issues */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif; /* Use a clean modern font for headings */
+  color: #222;
+}
+
+p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #1d1d1d;  /* Dark background for the navbar */
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-left .navbar-brand {
+  color: #ffffff; /* Set the "MY PORTFOLIO" link color to white */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-left .navbar-brand:hover {
+  color: #f9f9f9; /* Lighten the text on hover */
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;  /* Set the text color of navbar items to white */
+  font-size: 1.1em;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #444;
+  color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Container for content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Section (Text) */
+.left {
+  flex: 1;
+  max-width: 60%;
+  padding: 30px;
+  text-align: left;
+}
+
+.left h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.left p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+/* Right Section (Image) */
+.right {
+  flex: 1;
+  max-width: 35%;
+  text-align: center;
+}
+
+.right img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering the button */
+.center-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Button Styling */
+button {
+  background-color: #1d1d1d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .left, .right {
+      max-width: 100%;
+      text-align: center;
+      padding: 15px;
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+      margin-top: 10px;
+      margin-left: 0;
+  }
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 1200px) {
+  .container {
+      margin: 50px auto;
+      padding: 0 40px;
+  }
+
+  .left {
+      padding: 40px;
+  }
+}
